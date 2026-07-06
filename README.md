@@ -1,1 +1,1 @@
-# WEB-DEVELOPMENT(VGU)
+# Summer Internship VGU - 2026 (Web-Development)
