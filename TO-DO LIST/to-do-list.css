@@ -72,6 +72,22 @@ li{
     border-radius:5px;
 }
 
+.task-left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.taskCheckbox{
+    width:18px;
+    height:18px;
+    cursor:pointer;
+}
+
+.taskText{
+    word-break:break-word;
+}
+
 .completed{
     text-decoration:line-through;
     color:gray;
