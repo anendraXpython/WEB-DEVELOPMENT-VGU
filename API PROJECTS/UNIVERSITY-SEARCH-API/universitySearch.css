@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+input, button {
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 15px 10px;
+    font-size: 1.2rem;
+}
+
+td {
+    padding: 15px 10px;
+    font-size: 1rem;
+}
+
+
+tr {
+    border-bottom: 2px solid green;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
