@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Search App</title>
+    <link rel="stylesheet" href="universitySearch.css">
+</head>
+<body>
+
+    <div class="search-container">
+        <label for="countryInput">Country: </label>
+        <input type="text" id="countryInput" placeholder="Enter Country ...">
+        <button id="searchBtn">Search</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 45%;">University Name</th>
+                <th style="width: 25%;">State</th>
+                <th style="width: 30%;">Web Page</th>
+            </tr>
+        </thead>
+        <tbody id="universityTableBody">
+        </tbody>
+    </table>
+
+    <script src="universitySearch.js"></script>
+</body>
+</html>
