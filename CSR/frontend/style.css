@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.container {
+    width: 700px;
+    border: 1px solid pink;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+#inp {
+    width: 250px;
+    padding: 6px 10px;
+    font-size: 15px;
+}
+
+#btn {
+    padding: 6px 14px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.box {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.box p {
+    font-size: 18px;
+    margin: 10px 0;
+}
