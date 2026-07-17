@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="navbar-custom">
+        <a href="/" class="brand">VGU E-com</a>
+        <a href="/product/new" class="btn-plain btn-add">+ Add product</a>
+    </div>
+
+    <div class="product-grid">
+        <% for(let product of products){ %>
+            <div class="product-card">
+                <img src="<%= product.image %>" alt="<%= product.name %>">
+                <div class="card-content">
+                    <h3><%= product.name %></h3>
+                    <p class="price">$<%= product.price %></p>
+                    <p class="desc"><%= product.desc %></p>
+                    <div class="card-actions">
+                        <a href="/products/<%= product._id %>" class="btn-plain btn-show">Show</a>
+                        <div class="right">
+                            <a href="/products/<%= product._id %>/edit" class="btn-plain btn-edit">Edit</a>
+                            <form action="/products/<%= product._id %>?_method=DELETE" method="POST" class="inline">
+                                <button type="submit" class="btn-plain btn-delete">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+
+</body>
+</html>

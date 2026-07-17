@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add product</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="navbar-custom">
+        <a href="/" class="brand">VGU E-com</a>
+        <a href="/products" class="btn-plain btn-show">&larr; Back to products</a>
+    </div>
+
+    <div class="box">
+        <h2>Add new product</h2>
+        <form action="/products" method="POST">
+            <label for="name">Product name</label>
+            <input type="text" id="name" name="name">
+
+            <label for="image">Product image URL</label>
+            <input type="text" id="image" name="image">
+
+            <label for="price">Product price</label>
+            <input type="number" id="price" name="price">
+
+            <label for="desc">Product description</label>
+            <input type="text" id="desc" name="desc">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

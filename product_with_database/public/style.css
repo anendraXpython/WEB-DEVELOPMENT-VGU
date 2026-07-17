@@ -1,0 +1,252 @@
+:root{
+    --bg: #f7f7f5;
+    --surface: #ffffff;
+    --text: #2b2b2b;
+    --muted: #767676;
+    --border: #e6e4e0;
+    --accent: #4a5568;
+    --accent-hover: #333c47;
+    --danger: #b3542f;
+    --danger-hover: #93441f;
+    --radius: 10px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+.navbar-custom{
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-custom .brand{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 0.2px;
+}
+
+.btn-plain{
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-add{
+    background: var(--accent);
+    color: #fff;
+}
+.btn-add:hover{
+    background: var(--accent-hover);
+    color: #fff;
+}
+
+.btn-show{
+    background: transparent;
+    color: var(--accent);
+    border-color: var(--border);
+}
+.btn-show:hover{
+    background: var(--bg);
+}
+
+.btn-edit{
+    background: transparent;
+    color: var(--muted);
+    border-color: var(--border);
+}
+.btn-edit:hover{
+    background: var(--bg);
+}
+
+.btn-delete{
+    background: transparent;
+    color: var(--danger);
+    border-color: var(--border);
+}
+.btn-delete:hover{
+    background: #fbeee7;
+    border-color: var(--danger);
+}
+
+
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+    padding: 28px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.product-card:hover{
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+}
+
+.product-card img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-card .card-content{
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card h3{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: var(--text);
+}
+
+.product-card .price{
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin: 0 0 10px 0;
+    font-weight: 500;
+}
+
+.product-card p.desc{
+    font-size: 0.83rem;
+    color: var(--muted);
+    line-height: 1.4;
+    margin: 0 0 16px 0;
+    flex: 1;
+}
+
+.card-actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.card-actions .right{
+    display: flex;
+    gap: 6px;
+}
+
+form.inline{
+    display: inline;
+}
+
+.box{
+    max-width: 420px;
+    margin: 60px auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+}
+
+.box h2{
+    margin: 0 0 20px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.box label{
+    font-size: 0.83rem;
+    color: var(--muted);
+    font-weight: 500;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.box input{
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.box input:focus{
+    outline: none;
+    border-color: var(--accent);
+    background: var(--surface);
+}
+
+.box button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.box button:hover{
+    background: var(--accent-hover);
+}
+
+.show-wrap{
+    max-width: 420px;
+    margin: 50px auto;
+}
+
+.show-wrap .product-card img{
+    height: 220px;
+}
+
+.show-wrap .card-actions{
+    margin-top: 12px;
+}
+
+.hero{
+    max-width: 700px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.hero p{
+    color: var(--muted);
+    font-size: 0.95rem;
+}
