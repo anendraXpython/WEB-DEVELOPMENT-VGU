@@ -1,0 +1,20 @@
+<!-- NOTE: content not visible in screenshots; reconstructed placeholder -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Products</title>
+</head>
+<body>
+    <h1>All Products</h1>
+    <a href="/products/new">+ Add New Product</a>
+    <ul>
+        <% products.forEach(function(product) { %>
+            <li>
+                <a href="/products/<%= product.id %>"><%= product.title %></a>
+                - &#8377;<%= product.price %>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

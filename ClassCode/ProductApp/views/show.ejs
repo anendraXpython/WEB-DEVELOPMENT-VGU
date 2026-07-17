@@ -1,0 +1,21 @@
+<!-- NOTE: content not visible in screenshots; reconstructed placeholder -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= product.title %></title>
+</head>
+<body>
+    <h1><%= product.title %></h1>
+    <p>Price: &#8377;<%= product.price %></p>
+    <p><%= product.desc %></p>
+
+    <a href="/products/<%= product.id %>/edit">Edit</a>
+
+    <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+
+    <a href="/products">Back to all products</a>
+</body>
+</html>
