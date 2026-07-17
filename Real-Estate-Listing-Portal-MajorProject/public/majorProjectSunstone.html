@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nestly — Real Estate Listing Portal</title>
+<link rel="stylesheet" href="majorProjectSunstone.css">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+<body>
+
+<header>
+  <h1 class="logo">Nestly</h1>
+  <div style="display:flex; align-items:center; gap:20px;">
+    <nav>
+      <a href="#listings">Listings</a>
+      <a href="#map">Map Search</a>
+      <a href="#calculator">Mortgage Calculator</a>
+      <a href="#chat">Live Chat</a>
+    </nav>
+    <div id="userBadge" style="color:white; font-size:14px; white-space:nowrap;"></div>
+  </div>
+</header>
+
+<section class="hero">
+  <h2>Find your next home</h2>
+  <p>Search our listings by location and maximum budget. This search now talks to a real backend and database.</p>
+
+  <div class="search-box">
+    <select id="locationInput">
+      <option value="">All Locations</option>
+    </select>
+    <input type="number" id="maxPriceInput" placeholder="Max price (e.g. 500000)">
+    <button id="searchBtn">Search</button>
+    <button id="resetBtn">Reset</button>
+  </div>
+</section>
+
+<section id="listings">
+  <h2>Available Properties</h2>
+  <p id="resultText">Loading listings from the server...</p>
+  <div id="listingsGrid" class="listings-grid"></div>
+</section>
+
+<section id="map">
+  <h2>Map Search</h2>
+  <p>Real map, plotted from each listing's stored latitude/longitude in the database.</p>
+  <div id="mapContainer" style="height: 380px; border-radius: 8px; border: 1px solid #ddd;"></div>
+</section>
+
+<section id="calculator">
+  <h2>Mortgage Calculator</h2>
+  <p>Enter the home price, interest rate and loan term to estimate your monthly payment.</p>
+
+  <div class="calc-box">
+    <p id="calcSelectedNote" style="font-size:13px; color:#7C8792; margin:0 0 6px;">No listing selected yet — click "View Details" on a property first to link your calculation to it.</p>
+    <label for="calcPrice">Home Price ($)</label>
+    <input type="number" id="calcPrice" value="400000">
+
+    <label for="calcRate">Interest Rate (% per year)</label>
+    <input type="number" id="calcRate" value="7">
+
+    <label for="calcYears">Loan Term (years)</label>
+    <input type="number" id="calcYears" value="20">
+
+    <button id="calcBtn">Calculate</button>
+
+    <p id="calcResult"></p>
+  </div>
+</section>
+
+<section id="chat">
+  <h2>Live Chat with an Agent</h2>
+
+  <div class="calc-box" style="max-width: 500px;">
+    <label for="chatNameInput">Your Name</label>
+    <input type="text" id="chatNameInput" placeholder="e.g. Priya">
+
+    <div id="chatMessages" style="background:#F6F3EC; border:1px solid #ddd; border-radius:6px; padding:10px; height:200px; overflow-y:auto; margin-top:10px;"></div>
+
+    <div style="display:flex; gap:8px; margin-top:10px;">
+      <input type="text" id="chatMessageInput" placeholder="Type a message..." style="flex:1;">
+      <button id="chatSendBtn">Send</button>
+    </div>
+    <p id="chatStatus" style="font-size:12px; color:#7C8792;">Connecting to chat server...</p>
+  </div>
+</section>
+
+<footer>
+  <p>Nestly</p>
+</footer>
+
+<script src="majorProjectSunstone.js"></script>
+</body>
+</html>

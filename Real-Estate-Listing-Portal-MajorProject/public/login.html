@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nestly — Login</title>
+<link rel="stylesheet" href="majorProjectSunstone.css">
+</head>
+<body>
+
+<header>
+  <h1 class="logo">Nestly</h1>
+</header>
+
+<section class="hero">
+  <h2>Welcome to Nestly</h2>
+  <p>Enter your name and email to start searching listings and saving your mortgage calculations.</p>
+</section>
+
+<section>
+  <div class="calc-box" style="max-width: 380px; margin: 0 auto;">
+    <form id="loginForm">
+      <label for="loginUsername">Your Name</label>
+      <input type="text" id="loginUsername" required>
+
+      <label for="loginEmail">Your Email</label>
+      <input type="email" id="loginEmail" required>
+
+      <button type="submit">Enter Nestly</button>
+    </form>
+  </div>
+
+  <p id="authMessage" style="text-align:center; font-weight:bold; margin-top:15px;"></p>
+</section>
+
+<footer>
+  <p>Nestly — Student Web Development Project (Express + MongoDB + Socket.io backend)</p>
+</footer>
+
+<script src="login.js"></script>
+</body>
+</html>
