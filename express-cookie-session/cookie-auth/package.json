@@ -1,0 +1,13 @@
+{
+  "name": "cookie-auth",
+  "version": "1.0.0",
+  "description": "Small demo showing normal cookies vs signed cookies in Express",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2"
+  }
+}
