@@ -1,0 +1,152 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background:#f7f4ed;
+    font-family:Georgia, serif;
+}
+header{
+    border-bottom:1px solid black;
+}
+nav{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 0;
+}
+.text{
+    font-size:55px;
+    font-weight:bold;
+}
+ul{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    list-style:none;
+}
+ul a{
+    text-decoration:none;
+    color:black;
+    font-size:14px;
+}
+.btn{
+    background:black;
+    color:white;
+    padding:12px 22px;
+    border-radius:25px;
+}
+.main{
+    width:90%;
+    margin:auto;
+    min-height:80vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.heading{
+    flex:1;
+}
+.heading h1{
+    font-size:110px;
+    line-height:0.9;
+    font-weight:400;
+    margin-bottom:30px;
+}
+.heading p{
+    font-size:28px;
+    margin-bottom:40px;
+}
+.heading button{
+    background:black;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    font-size:20px;
+    cursor:pointer;
+}
+.image{
+    flex:1;
+    display:flex;
+    justify-content:flex-end;
+}
+.image img{
+    width:100%;
+    max-width:600px;
+    height:auto;
+}
+footer{
+    border-top:1px solid #cfcfcf;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:20px;
+}
+footer a{
+    text-decoration:none;
+    color:#6b6b6b;
+    font-size:14px;
+}
+@media(max-width:992px){
+    .heading h1{
+        font-size:80px;
+    }
+    .heading p{
+        font-size:22px;
+    }
+    .image img{
+        max-width:450px;
+    }
+}
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+    ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+    .main{
+        flex-direction:column;
+        text-align:center;
+        padding:50px 0;
+    }
+    .heading h1{
+        font-size:60px;
+    }
+    .heading p{
+        font-size:20px;
+    }
+    .image{
+        justify-content:center;
+        margin-top:40px;
+    }
+    .image img{
+        max-width:320px;
+    }
+}
+@media(max-width:480px){
+    .text{
+        font-size:40px;
+    }
+    .heading h1{
+        font-size:45px;
+    }
+    .heading p{
+        font-size:18px;
+    }
+    .heading button{
+        width:100%;
+        max-width:250px;
+    }
+    .image img{
+        max-width:260px;
+    }
+}
